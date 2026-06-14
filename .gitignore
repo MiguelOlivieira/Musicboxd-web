@@ -1,0 +1,40 @@
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Build output
+dist/
+.build/
+.vite/
+
+# Local env files
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.temp
+
+# pnpm lockfile if you don't want to commit it
+# pnpm-lock.yaml
+
+# Misc
+coverage/
+.sass-cache/
+*.log

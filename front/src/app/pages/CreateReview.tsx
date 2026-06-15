@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from "react-router"
 import { X, Star, Image as ImageIcon, Calendar, Smile, Tag } from "lucide-react"
 import { MOCK_ALBUMS } from "../data/mock"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback"
-import { Button } from "../components/ui/Button"
+import { Button } from "../components/ui/button"
 
 export function CreateReviewPage() {
   const { id } = useParams()

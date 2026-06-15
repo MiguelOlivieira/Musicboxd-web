@@ -2,7 +2,7 @@ import { ChevronDown, RefreshCcw } from "lucide-react"
 import { MOCK_DIARY } from "../data/mock"
 import { StarRating } from "../components/ui/StarRating"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback"
-import { Button } from "../components/ui/Button"
+import { Button } from "../components/ui/button"
 
 export function DiaryPage() {
   return (

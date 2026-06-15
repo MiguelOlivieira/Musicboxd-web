@@ -3,7 +3,7 @@ import { CheckCircle2, ListPlus, Heart, ListMusic, FileText, BadgeCheck, Edit2 }
 import { MOCK_ALBUMS } from "../data/mock"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback"
 import { StarRating } from "../components/ui/StarRating"
-import { Button } from "../components/ui/Button"
+import { Button } from "../components/ui/button"
 
 export function AlbumPage() {
   const { id } = useParams()

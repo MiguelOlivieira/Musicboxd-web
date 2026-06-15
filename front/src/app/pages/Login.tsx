@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 import { Disc3, Eye, EyeOff, Music } from "lucide-react"
-import { Button } from "../components/ui/Button"
+import { Button } from "../components/ui/button"
 
 export function LoginPage() {
   const [isLogin, setIsLogin] = useState(true)

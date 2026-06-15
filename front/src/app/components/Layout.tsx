@@ -1,7 +1,7 @@
 import { Outlet, NavLink, Link } from "react-router"
 import { Disc3, Home, Search, User, BookOpen, Users, LogIn, Bell } from "lucide-react"
 import { currentUser } from "../data/mock"
-import { Avatar } from "./ui/Avatar"
+import { Avatar } from "./ui/avatar"
 
 export function AppLayout() {
   return (
@@ -16,7 +16,6 @@ export function AppLayout() {
         <nav className="flex-1 space-y-1.5">
           <NavItem to="/" icon={<Home className="w-5 h-5" />} label="Início" />
           <NavItem to="/search" icon={<Search className="w-5 h-5" />} label="Buscar" />
-          <NavItem to="/profile" icon={<User className="w-5 h-5" />} label="Perfil" />
           <NavItem to="/diary" icon={<BookOpen className="w-5 h-5" />} label="Diário" />
           <NavItem to="/community" icon={<Users className="w-5 h-5" />} label="Comunidade" />
         </nav>
@@ -25,7 +24,9 @@ export function AppLayout() {
           <Avatar src={currentUser.avatar} alt={currentUser.name} />
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium truncate text-white">{currentUser.name}</p>
-            <p className="text-xs text-slate-400 truncate">Ver Perfil</p>
+            <Link to="/profile" className="text-xs text-slate-400 truncate hover:text-white">
+              Ver Perfil
+            </Link>
           </div>
         </div>
       </aside>

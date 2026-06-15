@@ -9,17 +9,15 @@ import musicboxd.repository.PlaylistRepository;
 import musicboxd.repository.PublicationRepository;
 import musicboxd.repository.UserRepository;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@SuppressWarnings("null")
 public class UserService {
 
     private final UserRepository userRepository;
@@ -27,8 +25,10 @@ public class UserService {
     private final PublicationRepository publicationRepository;
 
     @Transactional(readOnly = true)
-    public Page<UserResponseDTO> getAllUsers(Pageable pageable) {
-        return userRepository.findAll(pageable).map(this::mapToResponse);
+    public List<UserResponseDTO> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(this::mapToResponse)
+                .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
@@ -37,13 +37,13 @@ public class UserService {
     }
 
     @Transactional(readOnly = true)
-    public Page<PlaylistResponseDTO> getUserPlaylists(Integer id, Pageable pageable) {
-        return new PageImpl<>(Collections.<PlaylistResponseDTO>emptyList());
+    public List<PlaylistResponseDTO> getUserPlaylists(Integer id) {
+        return Collections.emptyList();
     }
 
     @Transactional(readOnly = true)
-    public Page<PublicationResponseDTO> getUserPublications(Integer id, Pageable pageable) {
-        return new PageImpl<>(Collections.<PublicationResponseDTO>emptyList());
+    public List<PublicationResponseDTO> getUserPublications(Integer id) {
+        return Collections.emptyList();
     }
 
     @Transactional

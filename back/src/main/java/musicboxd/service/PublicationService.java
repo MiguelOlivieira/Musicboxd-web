@@ -1,8 +1,6 @@
 package musicboxd.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import musicboxd.dto.request.PublicationRequestDTO;
 import musicboxd.dto.response.MusicResponseDTO;
 import musicboxd.dto.response.PublicationResponseDTO;
@@ -19,10 +17,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@SuppressWarnings("null")
 public class PublicationService {
 
     private final PublicationRepository publicationRepository;
@@ -31,8 +30,10 @@ public class PublicationService {
     private final MusicService musicService;
 
     @Transactional(readOnly = true)
-    public Page<PublicationResponseDTO> getFeed(Pageable pageable) {
-        return publicationRepository.findAll(pageable).map(this::mapToResponse);
+    public List<PublicationResponseDTO> getFeed() {
+        return publicationRepository.findAll().stream()
+                .map(this::mapToResponse)
+                .collect(Collectors.toList());
     }
 
     @Transactional

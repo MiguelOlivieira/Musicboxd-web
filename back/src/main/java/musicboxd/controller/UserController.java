@@ -6,10 +6,10 @@ import musicboxd.dto.response.PublicationResponseDTO;
 import musicboxd.dto.response.UserResponseDTO;
 import musicboxd.service.UserService;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/users")
@@ -19,8 +19,8 @@ public class UserController {
     private final UserService userProfileService;
 
     @GetMapping
-    public ResponseEntity<Page<UserResponseDTO>> getAllUsers(Pageable pageable) {
-        return ResponseEntity.ok(userProfileService.getAllUsers(pageable));
+    public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
+        return ResponseEntity.ok(userProfileService.getAllUsers());
     }
 
     @GetMapping("/{id}")
@@ -29,17 +29,13 @@ public class UserController {
     }
 
     @GetMapping("/{id}/playlists")
-    public ResponseEntity<Page<PlaylistResponseDTO>> getUserPlaylists(
-            @PathVariable Integer id, 
-            Pageable pageable) {
-        return ResponseEntity.ok(userProfileService.getUserPlaylists(id, pageable));
+    public ResponseEntity<List<PlaylistResponseDTO>> getUserPlaylists(@PathVariable Integer id) {
+        return ResponseEntity.ok(userProfileService.getUserPlaylists(id));
     }
 
     @GetMapping("/{id}/publications")
-    public ResponseEntity<Page<PublicationResponseDTO>> getUserPublications(
-            @PathVariable Integer id, 
-            Pageable pageable) {
-        return ResponseEntity.ok(userProfileService.getUserPublications(id, pageable));
+    public ResponseEntity<List<PublicationResponseDTO>> getUserPublications(@PathVariable Integer id) {
+        return ResponseEntity.ok(userProfileService.getUserPublications(id));
     }
 
     @DeleteMapping("/{userId}/playlists/{playlistId}")

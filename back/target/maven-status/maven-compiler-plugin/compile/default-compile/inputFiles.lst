@@ -1,3 +1,4 @@
+C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\config\WebConfig.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\controller\AlbumController.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\controller\AuthController.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\controller\CurrentUserController.java
@@ -18,6 +19,7 @@ C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicb
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\dto\response\MusicResponseDTO.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\dto\response\PlaylistResponseDTO.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\dto\response\PublicationResponseDTO.java
+C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\dto\response\SearchResponseDTO.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\dto\response\UserResponseDTO.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\exception\ExceptionGlobalHandler.java
 C:\Users\renat\Documents\Code\MusicBoxdFront\Musicboxd\back\src\main\java\musicboxd\exception\InvalidArgumentException.java

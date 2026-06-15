@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 import { AppLayout } from "./components/Layout";
 import { HomePage } from "./pages/Home";
 import { ProfilePage } from "./pages/Profile";
@@ -30,6 +30,7 @@ export const router = createBrowserRouter([
     path: "/auth",
     Component: AuthLayout,
     children: [
+      { index: true, loader: () => redirect("/auth/login") },
       { path: "login", Component: LoginPage },
       { path: "signup", Component: LoginPage },
     ]

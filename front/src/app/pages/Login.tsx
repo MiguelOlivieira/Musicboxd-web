@@ -10,6 +10,7 @@ export function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    localStorage.setItem("@musicboxd:auth", "true")
     navigate("/")
   }
 
@@ -101,7 +102,7 @@ export function LoginPage() {
             </div>
           )}
 
-          <Button variant="purple" className="w-full py-6 text-base font-semibold mt-4 shadow-lg shadow-[#7b3fe4]/25">
+          <Button type="submit" variant="purple" className="w-full py-6 text-base font-semibold mt-4 shadow-lg shadow-[#7b3fe4]/25">
             {isLogin ? "Entrar" : "Criar minha conta"}
           </Button>
         </form>
@@ -113,10 +114,10 @@ export function LoginPage() {
         </div>
 
         <div className="mt-6 grid grid-cols-2 gap-4">
-          <Button variant="outline" className="bg-[#251d38] border-none hover:bg-white/5 py-5 gap-2">
+          <Button type="button" variant="outline" className="bg-[#251d38] border-none hover:bg-white/5 py-5 gap-2">
             <Music className="w-5 h-5" /> Spotify
           </Button>
-          <Button variant="outline" className="bg-[#251d38] border-none hover:bg-white/5 py-5 gap-2">
+          <Button type="button" variant="outline" className="bg-[#251d38] border-none hover:bg-white/5 py-5 gap-2">
             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.05 2.53.68 3.14.68.65 0 1.96-.75 3.57-.65 1.54.06 2.87.65 3.65 1.7-3.15 1.84-2.6 5.86.32 6.94-.74 1.83-1.61 3.53-2.68 4.3zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
              Apple
           </Button>

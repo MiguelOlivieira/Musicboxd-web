@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router"
 import { Upload, Plus, X } from "lucide-react"
 import { MOCK_ALBUMS } from "../data/mock"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback"
-import { Button } from "../components/ui/Button"
+import { Button } from "../components/ui/button"
 
 export function EditAlbumPage() {
   const { id } = useParams()

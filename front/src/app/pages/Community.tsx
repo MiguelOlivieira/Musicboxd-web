@@ -1,7 +1,7 @@
 import { Plus, TrendingUp, UserPlus } from "lucide-react"
 import { MOCK_USERS, MOCK_ALBUMS } from "../data/mock"
-import { Avatar } from "../components/ui/Avatar"
-import { Button } from "../components/ui/Button"
+import { Avatar } from "../components/ui/avatar"
+import { Button } from "../components/ui/button"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback"
 
 export function CommunityPage() {

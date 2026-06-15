@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router"
 import { Search as SearchIcon, Filter, X, Music, Disc, User } from "lucide-react"
 import { MOCK_ALBUMS, MOCK_USERS } from "../data/mock"
-import { Avatar } from "../components/ui/Avatar"
+import { Avatar } from "../components/ui/avatar"
 import { StarRating } from "../components/ui/StarRating"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback"
 
